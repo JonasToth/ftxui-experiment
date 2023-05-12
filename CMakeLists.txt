@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.11)
+cmake_minimum_required (VERSION 3.26)
 
 # --- Fetch FTXUI --------------------------------------------------------------
 include(FetchContent)
@@ -17,18 +17,18 @@ endif()
 
 # ------------------------------------------------------------------------------
 
-project(ftxui-starter
+project(ftxui-experiment
   LANGUAGES CXX
-  VERSION 1.0.0
+  VERSION 0.1.0
 )
 
-add_executable(ftxui-starter src/main.cpp)
-target_include_directories(ftxui-starter PRIVATE src)
+add_executable(ftxui-experiment src/main.cpp)
+target_include_directories(ftxui-experiment PRIVATE src)
 
-target_link_libraries(ftxui-starter
+target_link_libraries(ftxui-experiment
   PRIVATE ftxui::screen
   PRIVATE ftxui::dom
-  PRIVATE ftxui::component # Not needed for this example.
+  PRIVATE ftxui::component
 )
 
 if (EMSCRIPTEN) 

@@ -1,0 +1,4 @@
+build
+build_emscripten
+compile_commands.json
+.cache
